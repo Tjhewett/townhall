@@ -8,43 +8,20 @@ body {
 header img {
 	float: left;
 }
-header em {
-	text-shadow: 1px 1px 1px #800000;
-}
-header h2 {
-	color: #800000;
-	font-size: 170%;
-	text-indent: 30px; 
-}
-header h3{
-	font-size: 130%;
-	font-style: italic;
-	text-indent: 30px; 
-}
 
 /* the styles for the main content */
-main{
+main {
 	clear: left;
 }
 main h1 {
 	font-size: 150%;
 }
 main h2 {
-	color: #800000;
+	color: var(--global-color-1);
 	font-size: 130%;
 }
-
-main h3{
+main h3 {
 	font-size: 105%;
 }
-section a:hover, section a:active {
-    font-style: italic;
-}
+
 /* the styles for the footer */
-footer{
-	text-align: center;
-}
-
-
-
-
