@@ -9,10 +9,11 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 800px;
+    width: 98%;
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
+	max-width: 960px;
 }
 a:focus, a:hover {
 	font-style: italic;
@@ -51,13 +52,15 @@ header img {
 	margin: 0;
 	padding: 0;
 	position: relative;
+	width: 100%;
 }
 #nav_menu ul li {
 	float: left;
+	width: 20%;
 }
 #nav_menu ul li a {
     display: block;
-    width: 160px;
+    /* width: 160px;  160 / 960 * 100 = 16.667 */ 
     text-align: center;
     padding: 1em 0;
     text-decoration: none;
@@ -87,13 +90,13 @@ header img {
 
 /* the styles for the section */
 section {
-	width: 525px;
+	width: 73%; /* 525 / 960 * 100 = 54.6875 */
 	float: right;
-	padding: 0 20px 20px 20px;
+	padding: 5px 5px; /* 20 / 960 * 100 = 2.083 */
 }
 section h1 {
 	font-size: 150%;
-	padding: .5em 0 .25em 0;
+	padding: .5em 0 .25em 0; 
 	margin: 0;
 }
 section h2 {
@@ -118,7 +121,7 @@ section li {
 
 /* the styles for the article */
 article {
-	padding: .5em 0;
+	padding: 1em 0;
 	border-top: 2px solid #800000;
 	border-bottom: 2px solid #800000;
 }
@@ -131,15 +134,17 @@ article h3 {
 }
 article img {
 	float: right;
-	margin: .5em 0 1em 1em;
+	margin: .5em .5em 1em 1em;
 	border: 1px solid black;
+	max-width: 30%;
+	min-width: 150px;
 }
 
 /* the styles for the aside */
 aside {
-	width: 215px;
+	width: 23%; /* 215 / 960 * 100 = 22.39583 */
 	float: right;
-	padding: 0 0 20px 20px;
+	padding: 5px 5px; /* 20 / 960 * 100 = 2.083 */
 }
 aside h2 {
 	color: #800000;
@@ -155,6 +160,7 @@ aside img {
 	padding-bottom: 1em;
 }
 
+
 /* the styles for the footer */
 footer {
 	background-color: #931420;
@@ -165,4 +171,42 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
+}
+
+/* Media Queries*/
+@media only screen and (max-width: 700px){
+	aside h3 a{
+		font-size: 85%;
+	}
+	aside h2{
+		font-size: 110%;
+	}
+	section h1{
+		font-size: 125%;
+	}
+	section h2{
+		font-size: 110%;
+	}
+}
+@media only screen and (max-width: 515px){
+	header img{
+		float: none;
+		margin: auto;
+		display: block;
+	}
+	header h2, header h3{ 
+		text-align: center;
+	}
+	section{
+		float: none;
+		width: 100%;
+	}
+	aside{
+		float: none;
+		width: 100%;
+	}
+	/* looks better when it changes here because it messes with the formatting if it is done before */
+	aside div{
+		column-count: 2;
+	}
 }
