@@ -173,6 +173,10 @@ footer p {
 	padding: 1em 0;
 }
 
+#mobilemenu{
+    display: none;
+}
+
 /* Media Queries*/
 @media only screen and (max-width: 700px){
 	aside h3 a{
@@ -189,6 +193,15 @@ footer p {
 	}
 }
 @media only screen and (max-width: 515px){
+	#nav_menu{
+		display: none;
+	}
+	#mobilemenu{
+		display: block;
+	}
+	.slicknav_menu{
+        background-color: #800000 !important;
+    }
 	header img{
 		float: none;
 		margin: auto;
@@ -208,5 +221,10 @@ footer p {
 	/* looks better when it changes here because it messes with the formatting if it is done before */
 	aside div{
 		column-count: 2;
+	}
+}
+@media only screen and (max-width: 425px){
+	html{
+		font-size: 90%;
 	}
 }
